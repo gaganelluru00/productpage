@@ -3,6 +3,7 @@
 </head>
 <body>
 
+  <!--navigation bar-->
 <div>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -13,6 +14,7 @@
           <div id="mySidebar" class="sidebar">
             <a class="closebtn" (click)="closeNav()">×</a>
             <ul>
+              <li><h1 style="color: white;">Menu</h1></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Wish List</a></li>
             <li> <a href="#">Feedback</a></li>
@@ -20,11 +22,11 @@
           </div>
         
           
-          <a (click)="openNav()"><b>☰ </b></a>  
+          <a style="padding-top: 20px;" (click)="openNav()"><b>☰ </b></a>  
           
     
         </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Categories</b> <span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 20px;"><b>Categories</b> <span class="caret"></span></a>
           <ul class="dropdown-menu" (click)="getCategoryProducts($event)">
             <li><a>All Products</a></li>
            <li><a *ngFor="let product of products">{{product.productCategory}}</a></li>
@@ -33,7 +35,7 @@
       
 
       
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Discounts</b> <span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 20px;"><b>Discounts</b> <span class="caret"></span></a>
           <ul class="dropdown-menu" (click)="getDiscountProducts($event)">
             <li><a>Less than 50</a></li>
             <li><a>50-60</a></li>
@@ -42,7 +44,8 @@
           </ul>
         </li>
       
-      <li> <a id="title" (click)="openPop()" ><b>Coupons </b></a></li>
+      <li style="padding-top: 6px;"> <a id="title" (click)="openPop()" ><b>Coupons </b></a></li>
+      <li> <b style="color: white;"><h1 style="padding-left: 500px;">Capstore</h1> </b></li>
 
        
 
@@ -50,7 +53,7 @@
          
 
          </ul>
-         <div style="float: right;">
+         <div style="float: right;padding-top: 6px;">
          <div class="search-container">
           <form class="form-inline">
             <input  class="form-control mr-sm-2" style="width: 500px;margin-right: 3px;margin-top: 6px;" type="text"    required  [(ngModel)]="searchProduct" name="username" ngModel>
@@ -66,69 +69,55 @@
     </div>
   </nav></div>
 
+
+  <!--slider -->
 <div>
 <div id="slideshow">
   <div class="slide-wrapper">
-    <div class="slide"><a (click)="show()"><h3>Product 1</h3></a></div>
-    <div class="slide"><a (click)="show()"><h3>Product 2</h3></a></div>
-    <div class="slide"><a (click)="show()"><h3>Product 3</h3></a></div>
-    <div class="slide"><a (click)="show()"><h3>Product 4</h3></a></div>
-    <div class="slide"><a (click)="show()"><h3>Product 1</h3></a></div>
-    <div class="slide"><h1 class="slide-number">6</h1></div>
-    
-  </div>
+    <div class="slide"><a (click)="show()"><img style="width: 728px; height: 405px;" src="https://c8.alamy.com/comp/2AKGW7J/grocery-shopping-promotional-sale-advertisement-fast-shopping-cart-full-of-fresh-colorful-food-2AKGW7J.jpg"/></a></div>
+    <div class="slide"><a (click)="show()"><img style="width: 728px; height: 310px;" src="https://dtkshop.com/image/cache/catalog/home/slider-01-1903x700-1903x700.jpg"/></a></div>
+    <div class="slide"><a (click)="show()"><img style="width: 728px; height: 310px;" src="https://bmfshopcart.com/image/catalog/demo/slider/mobile_slide/slide1.jpg"/></a></div>
+    <div class="slide"><a (click)="show()"><img style="width: 728px; height: 405px;" src="https://images.moneycontrol.com/static-mcnews/2020/04/1-grocery-shopping.jpg"/></a></div>
+    </div>
 </div>
-
 </div>
 
 
 
 
 <br><br>
-<marquee behaviour="scroll" direction="left" >
-  
-<div class="card" style="background-color: white;" >
-  <img src="" alt="Product Image">
-  <h3>Product Name</h3>
-  <p class="price">Product Cost</p>
-  
-  <p><button style="width: 70%;height: 40px; text-align: center; background-color:chartreuse; color: black;"><small> Product</small></button></p>
-</div>
 
-<div class="card" style="background-color: white;">
-  <img src=""  alt="Product Image" >
-  <h3>Product Name</h3>
-  <p class="price">Product Cost</p>
-  
-  <p><button style="width: 70%;height: 40px; text-align: center; background-color:chartreuse; color: black;"><small> Product</small></button></p>
-</div>
 
-</marquee>
-<br><br>
 
 
 
 
   
  
-   {{searchProduct}}
-    <br><br>
+  
 
 
 
   
 
-
+<!--to display promo codes-->
   <div class="w3-container">
     <div id="id01" class="w3-modal">
       <div class="w3-modal-content">
         <div class="w3-container">
           <span (click)="closePop()" class="w3-button w3-display-topright">&times;</span>
           <div class="scroll">
-          <h1>Coupon details will be displayed</h1>
-          <h1>Coupon details will be displayed</h1><h1>Coupon details will be displayed</h1><h1>Coupon details will be displayed</h1>
-          <h1>Coupon details will be displayed</h1><h1>Coupon details will be displayed</h1>
-          <h1>Coupon details will be displayed</h1><h1>Coupon details will be displayed</h1><h1>Coupon details will be displayed</h1><h1>Coupon details will be displayed</h1>
+         <table class=" table table-striped">
+       <thead>
+         <tr>
+          
+          <th>Coupon Amount</th>
+           <th>Coupon Start Date</th>
+           <th>Coupon End Date</th>
+           <th>Minimum Order Amount</th>
+         </tr>
+       </thead>
+         </table>
           </div>
         </div>
       </div>
@@ -142,51 +131,35 @@
 
 
 
-<ng-container *ngIf="noShow" style="text-align: center; margin-left: 400px;">
-  <div class="container py-5">
-    <div class="row text-center text-white mb-5">
-        <div class="col-lg-7 mx-auto">
-            <h1 class="display-4">Product List</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <!-- List group-->
-            <ul class="list-group shadow">
-                <!-- list group item-->
-                <li class="list-group-item" *ngFor="let product of categoryProducts">
-                    <!-- Custom content-->
-                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                        <div class="media-body order-2 order-lg-1">
-                            <h5 class="mt-0 font-weight-bold mb-2">Product Name</h5>
-                            <p class="font-italic text-muted mb-0 small">Product Info</p>
-                            <div class="d-flex align-items-center justify-content-between mt-1">
-                                <h6 class="font-weight-bold my-2">{{product.productPrice}}</h6>
-                                <ul class="list-inline small">
-                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                                  <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
-                              </ul>
 
-                            </div>
-                            
-                        </div><img src="https://i.imgur.com/6IUbEME.jpg" alt="Product Image" width="200" class="ml-lg-5 order-1 order-lg-2">
-                        
-                    </div> <!-- End -->
-                    <br>
-                    <button type="button" class="btn btn-default btn-rounded peach-gradient" style="background-color: greenyellow;"><b>Product</b></button>
-                </li> <!-- End -->
-                <!-- list group item-->
-                
-                
-                
-            </ul> <!-- End -->
-        </div>
-    </div>
-</div>
-</ng-container>
+<!--to display products-->
+  <div class="container">
+
+    <div class="row">
+    <div class="col-md-4" *ngFor="let product of categoryProducts">
+      <figure class="card card-product">
+        <div class="img-wrap"><img src="" alt="Product Image"></div>
+        <figcaption class="info-wrap">
+            <h4 class="title">Product Name</h4>
+            <p class="desc">Product Information</p>
+           
+            <div class="price-wrap h5">
+              <span class="price-new">Product Price</span> 
+            </div> <!-- price-wrap.// -->
+        </figcaption>
+        <div class="bottom-wrap">
+          <a href="" class="btn btn-sm btn-primary float-right">Product Page</a>	
+          
+        </div> <!-- bottom-wrap.// -->
+      </figure>
+    </div> <!-- col // -->
+    
+    
+    </div> <!-- row.// -->
+    
+    
+    
+    </div> 
  
   
   
