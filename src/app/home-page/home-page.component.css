@@ -1,7 +1,8 @@
 
 body {
     font-family: Helvetica, sans-serif;
-    background-color:#344A75;
+    min-height: 100vh;
+   
   padding: 0px;
     margin: 0px;
     text-align: center;
@@ -214,18 +215,58 @@ body {
 
 
 
-  body {
-    background: linear-gradient(to right, #c04848, #480048);
-    min-height: 100vh;
-}
+ 
 
 .text-gray {
     color: #aaa
 }
 
-img {
-    height: 170px;
-    width: 140px
+img{
+  width: 200px;
+  height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.card-product .img-wrap {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  position: relative;
+  height: 220px;
+  text-align: center;
+}
+.card-product .img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.card-product .info-wrap {
+  overflow: hidden;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+.card-product .bottom-wrap {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.label-rating { margin-right:10px;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card-product .price-old {
+  color: #999;
 }
 
 
