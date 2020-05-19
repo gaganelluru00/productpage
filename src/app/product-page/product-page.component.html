@@ -15,6 +15,7 @@
           <div id="mySidebar" class="sidebar">
             <a class="closebtn" (click)="closeNav()">×</a>
             <ul>
+              <li><h1 style="color: white;">Menu</h1></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Wish List</a></li>
             <li> <a href="#">Feedback</a></li>
@@ -22,11 +23,11 @@
           </div>
         
           
-          <a (click)="openNav()"><b>☰ </b></a>  
+          <a style="padding-top: 20px;" (click)="openNav()"><b>☰ </b></a>  
           
     
         </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Categories</b> <span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 20px;"><b>Categories</b> <span class="caret"></span></a>
           <ul class="dropdown-menu" (click)="getCategoryProducts($event)">
             <li><a>All Products</a></li>
            <li><a *ngFor="let product of products">{{product.productCategory}}</a></li>
@@ -35,7 +36,7 @@
       
 
       
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Discounts</b> <span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 20px;"><b>Discounts</b> <span class="caret"></span></a>
           <ul class="dropdown-menu" (click)="getDiscountProducts($event)">
             <li><a>Less than 50</a></li>
             <li><a>50-60</a></li>
@@ -44,7 +45,8 @@
           </ul>
         </li>
       
-      <li> <a id="title" (click)="openPop()" ><b>Coupons </b></a></li>
+      <li style="padding-top: 6px;"> <a id="title" (click)="openPop()" ><b>Coupons </b></a></li>
+      <li> <b style="color: white;"><h1 style="padding-left: 500px;">Capstore</h1> </b></li>
 
        
 
@@ -52,7 +54,7 @@
          
 
          </ul>
-         <div style="float: right;">
+         <div style="float: right;padding-top: 6px;">
          <div class="search-container">
           <form class="form-inline">
             <input  class="form-control mr-sm-2" style="width: 500px;margin-right: 3px;margin-top: 6px;" type="text"    required  [(ngModel)]="searchProduct" name="username" ngModel>
